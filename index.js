@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const { builtinModules } = require('module');
 const { type } = require('os');
-const ytdl = require('ytdl-core');
-const ytld = require('ytdl-core')
 
 const client = new Discord.Client();
 
@@ -19,6 +17,7 @@ client.on('guildMemberAdd', (member) => {
     welcomeChannel.send(`Welcome in Fortnite & Pixel ${member} !`);
 
     member.roles.add('869748859507703853');
+    member.roles.add('869748859507703858');
 });
 
 client.on('guildMemberRemove', member  => {
@@ -27,7 +26,7 @@ client.on('guildMemberRemove', member  => {
 });
 
 client.on('message', (msg) => {
-    if (msg.content.startsWith('!dm-user')) {
+    if (msg.content.startsWith('!dm')) {
         if (!msg.member.hasPermission('ADMINISTRATOR')) return msg.channel.send('Vous ne pouvez pas éxecuter cet commande !')
 
         const args = msg.content.split(" ").slice(0);
@@ -70,6 +69,12 @@ client.on('message', (msg) => {
     }
     if (msg.content === '!ltweet') {
         msg.channel.send(`**Salut Rawko a posté un nouveau tweet : ** https://twitter.com/luzmogww`);
+    }
+    if (msg.content === 'quoi') {
+        msg.channel.send(`feur`);
+    }
+    if (msg.content === '.ajt') {
+        msg.channel.send(`**Channel <#873269937915953192> updated successfully ** !\n \n__Reason__ : **Pixel Season 8**`);
     }
 });
 
