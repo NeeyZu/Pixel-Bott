@@ -14,7 +14,7 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd', (member) => {
     let welcomeChannel = client.channels.cache.get('869748860233351186');
-    welcomeChannel.send(`Welcome to the __Fortnite & Pixel__ ${member} ! \n Follow us on Twitter <#873265231256780891> !`);
+    welcomeChannel.send(`Welcome to the __Fortnite & Pixel__ ${member} ! \n \n> **Follow us on Twitter #👷🏻・𝗦𝗼𝗰𝗶𝗮𝗹 !**`);
 
     member.roles.add('869748859507703853');
     member.roles.add('869748859507703858');
