@@ -100,10 +100,10 @@ client.on('message', async message => {
             console.log(index)
             let inviteEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
-            .setDescription(`Invitations de ${member.user.tag}`)
-            .addField(`Nombre d'invitations`, index.toString())
-            .addField(`Soon`, `discord.gg/pixelfr`)
-            .setTitle(`Invitations de ${member.user.tag}`)
+            .setDescription(``)
+            .addField(`Total of invites`, index.toString())
+            .addField(`Follow us`, `<#873265231256780891>`)
+            .setTitle(`Invites of ${member.user.tag}`)
 
             message.channel.send(inviteEmbed)
         } catch (e) {
