@@ -22,7 +22,7 @@ client.on('guildMemberAdd', (member) => {
 
 client.on('guildMemberRemove', member  => {
     let leaveChannel = client.channels.cache.get('883082105620422687');
-    leaveChannel.send(`${member} est parti`);
+    leaveChannel.send(`Goodbye ${member} ! `);
 });
 
 client.on('message', (msg) => {
@@ -113,8 +113,8 @@ client.on('message', async message => {
 });
 
 client.on("message", message => {
-    if(message.member.permissions.has("MANAGE_MESSAGES")){
-        if(message.content.startsWith("_clear")){
+    if(message.member.permissions.has("ADMINISTRATOR")){
+        if(message.content.startsWith("clear")){
             let args = message.content.split(" ");
 
             if(args[1] == undefined){
